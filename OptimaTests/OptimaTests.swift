@@ -5,13 +5,15 @@
 //  Created by Enzo Carpentier on 09/06/2025.
 //
 
-import Testing
+import XCTest
 @testable import Optima
 
-struct OptimaTests {
-
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+final class OptimaTests: XCTestCase {
+    
+    func testExample() throws {
+        // This is an example test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertTrue(true)
     }
-
+    
 }

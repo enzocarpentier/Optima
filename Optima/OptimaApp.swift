@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct OptimaApp: App {
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if hasCompletedOnboarding {
+                MainView()
+            } else {
+                OnboardingView()
+            }
         }
     }
 }
