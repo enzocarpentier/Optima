@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Sparkle
 
 @main
 struct OptimaApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding: Bool = false
     
     var body: some Scene {

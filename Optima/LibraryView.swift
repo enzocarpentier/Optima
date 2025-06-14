@@ -382,25 +382,22 @@ struct LibraryView: View {
                 LibraryGridView(
                     items: sortedItems,
                     selectedItemId: $selectedItemId,
-                    menuTargetId: $menuTargetId,
-                    renameText: $renameText,
-                    showRenameDialog: $showRenameDialog,
-                    showMoveDialog: $showMoveDialog,
                     libraryManager: libraryManager,
                     onDoubleClick: handleDoubleClick,
-                    onMove: moveItem
+                    onMove: moveItem,
+                    contextMenuProvider: { item in
+                        itemContextMenu(for: item)
+                    }
                 )
             } else {
                 LibraryListView(
                     items: sortedItems,
                     selectedItemId: $selectedItemId,
-                    menuTargetId: $menuTargetId,
-                    renameText: $renameText,
-                    showRenameDialog: $showRenameDialog,
-                    showMoveDialog: $showMoveDialog,
                     libraryManager: libraryManager,
                     onDoubleClick: handleDoubleClick,
-                    onMove: moveItem
+                    contextMenuProvider: { item in
+                        itemContextMenu(for: item)
+                    }
                 )
             }
         }
@@ -677,13 +674,10 @@ private struct EmptyLibraryView: View {
 private struct LibraryGridView: View {
     let items: [any LibraryItem]
     @Binding var selectedItemId: UUID?
-    @Binding var menuTargetId: UUID?
-    @Binding var renameText: String
-    @Binding var showRenameDialog: Bool
-    @Binding var showMoveDialog: Bool
     var libraryManager: PDFLibraryManager
     let onDoubleClick: (any LibraryItem) -> Void
     let onMove: (String, UUID) -> Void
+    let contextMenuProvider: (any LibraryItem) -> any View
 
     private let columns = [GridItem(.adaptive(minimum: 180, maximum: 220), spacing: 20)]
 
@@ -694,7 +688,9 @@ private struct LibraryGridView: View {
                     LibraryItemCell(item: item, isSelected: selectedItemId == item.id)
                         .highPriorityGesture(TapGesture(count: 2).onEnded { onDoubleClick(item) })
                         .simultaneousGesture(TapGesture().onEnded { selectedItemId = item.id })
-                        .contextMenu { itemContextMenu(for: item) }
+                        .contextMenu {
+                            AnyView(contextMenuProvider(item))
+                        }
                         .onDrag { NSItemProvider(object: item.id.uuidString as NSString) }
                         .dropDestination(for: String.self) { droppedItems, _ in
                             guard let firstId = droppedItems.first, item.itemType == .folder else { return false }
@@ -706,20 +702,16 @@ private struct LibraryGridView: View {
             .padding()
         }
         .background(Color.clear)
-        .onTapGesture { selectedItemId = nil } // Désélectionner en cliquant sur le fond
+        .onTapGesture { selectedItemId = nil }
     }
 }
 
 private struct LibraryListView: View {
     let items: [any LibraryItem]
     @Binding var selectedItemId: UUID?
-    @Binding var menuTargetId: UUID?
-    @Binding var renameText: String
-    @Binding var showRenameDialog: Bool
-    @Binding var showMoveDialog: Bool
     var libraryManager: PDFLibraryManager
     let onDoubleClick: (any LibraryItem) -> Void
-    let onMove: (String, UUID) -> Void
+    let contextMenuProvider: (any LibraryItem) -> any View
 
     var body: some View {
         List(selection: $selectedItemId) {
@@ -727,7 +719,9 @@ private struct LibraryListView: View {
                 LibraryListItemCell(item: item, libraryManager: libraryManager)
                     .onTapGesture(count: 2) { onDoubleClick(item) }
                     .listRowBackground(Color.clear)
-                    .contextMenu { itemContextMenu(for: item) }
+                    .contextMenu {
+                        AnyView(contextMenuProvider(item))
+                    }
             }
         }
         .scrollContentBackground(.hidden)
@@ -1101,5 +1095,173 @@ private struct DocumentActionView: View {
             )
         }
         .buttonStyle(PlainButtonStyle())
+    }
+}
+
+// MARK: - Vues supplémentaires
+
+private struct LibraryHeaderView: View {
+    @Binding var searchText: String
+    @Binding var isGridView: Bool
+    let breadcrumbs: [FolderItem]
+    let onNewFolder: () -> Void
+    let onImportFile: () -> Void
+    let onNavigate: (UUID?) -> Void
+    let onDrop: (UUID?, String) -> Void
+
+    var body: some View {
+        VStack(spacing: 20) {
+            HStack {
+                Text("Bibliothèque")
+                    .font(.system(size: 32, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                // Bouton pour changer de vue (grille/liste)
+                Button(action: {
+                    withAnimation { isGridView.toggle() }
+                }) {
+                    Image(systemName: isGridView ? "list.bullet" : "square.grid.2x2")
+                        .font(.system(size: 18))
+                        .foregroundColor(.white)
+                        .padding(8)
+                        .background(Color.white.opacity(0.1))
+                        .clipShape(Circle())
+                }
+                .buttonStyle(PlainButtonStyle())
+                
+                // Bouton pour créer un nouveau dossier
+                Button(action: onNewFolder) {
+                    Image(systemName: "folder.badge.plus")
+                        .font(.system(size: 18))
+                        .foregroundColor(.white)
+                        .padding(8)
+                        .background(Color.white.opacity(0.1))
+                        .clipShape(Circle())
+                }
+                .buttonStyle(PlainButtonStyle())
+                
+                // Bouton pour importer un fichier
+                Button(action: onImportFile) {
+                    Image(systemName: "doc.badge.plus")
+                        .font(.system(size: 18))
+                        .foregroundColor(.white)
+                        .padding(8)
+                        .background(Color.white.opacity(0.1))
+                        .clipShape(Circle())
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+            
+            // Fil d'Ariane
+            if !breadcrumbs.isEmpty {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 4) {
+                        // Bouton pour revenir à la racine
+                        DropTargetButton(onDrop: { payload in onDrop(nil, payload) }, contentBuilder: {
+                            HStack(spacing: 2) {
+                                Image(systemName: "house.fill")
+                                    .font(.system(size: 12))
+                                Text("Accueil")
+                                    .font(.system(size: 12, weight: .medium))
+                            }
+                            .padding(.vertical, 6)
+                            .padding(.horizontal, 10)
+                            .background(Color.white.opacity(0.08))
+                            .cornerRadius(12)
+                        })
+                        .onTapGesture { onNavigate(nil) }
+
+                        // Chemin des dossiers
+                        ForEach(breadcrumbs) { folder in
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 10))
+                                .foregroundColor(.white.opacity(0.6))
+                                .padding(.horizontal, 2)
+                            
+                            DropTargetButton(onDrop: { payload in onDrop(folder.id, payload) }, contentBuilder: {
+                                Text(folder.name)
+                                    .font(.system(size: 12, weight: .medium))
+                                    .lineLimit(1)
+                                    .padding(.vertical, 6)
+                                    .padding(.horizontal, 10)
+                                    .background(Color.white.opacity(0.05))
+                                    .cornerRadius(12)
+                            })
+                            .onTapGesture { onNavigate(folder.id) }
+                        }
+                    }
+                    .padding(.vertical, 4)
+                }
+            }
+            
+            // Barre de recherche
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.white.opacity(0.7))
+                
+                TextField("Rechercher...", text: $searchText)
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .foregroundColor(.white)
+                    .colorScheme(.dark)
+                
+                if !searchText.isEmpty {
+                    Button(action: { searchText = "" }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.white.opacity(0.7))
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            .padding(12)
+            .background(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(Color.white.opacity(0.07))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .stroke(Color.white.opacity(0.2), lineWidth: 1)
+                    )
+            )
+        }
+        .padding(.horizontal)
+        .padding(.top, 16)
+        .padding(.bottom, 8)
+        .background(
+            LinearGradient(
+                colors: [
+                    Color(red: 0.1, green: 0.1, blue: 0.3).opacity(0.9),
+                    Color(red: 0.1, green: 0.1, blue: 0.3).opacity(0)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        )
+    }
+}
+
+// Wrapper pour rendre n'importe quelle vue une zone de dépôt
+private struct DropTargetButton<Content: View>: View {
+    let onDrop: (String) -> Void
+    let viewContent: () -> Content
+    @State private var isTargeted = false
+
+    init(onDrop: @escaping (String) -> Void, @ViewBuilder contentBuilder: @escaping () -> Content) {
+        self.onDrop = onDrop
+        self.viewContent = contentBuilder
+    }
+
+    var body: some View {
+        viewContent()
+            .background(isTargeted ? Color.blue.opacity(0.4) : Color.clear)
+            .dropDestination(for: String.self) { items, _ in
+                guard let payload = items.first else { return false }
+                onDrop(payload)
+                return true
+            } isTargeted: { isTargeted in
+                withAnimation(.spring()) {
+                    self.isTargeted = isTargeted
+                }
+            }
     }
 }
