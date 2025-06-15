@@ -1,10 +1,14 @@
 import SwiftUI
 import Security
+import Sparkle
 
 struct SettingsView: View {
     @StateObject private var apiKeyManager = APIKeyManager.shared
     @State private var apiKeyInput: String = ""
     @State private var showContent = false
+
+    // Le contrôleur pour l'updater Sparkle
+    private let updaterController = SPUStandardUpdaterController(startingUpdater: false, updaterDelegate: nil, userDriverDelegate: nil)
 
     var body: some View {
         ScrollView {
@@ -82,6 +86,40 @@ struct SettingsView: View {
                             .font(.caption)
                             .foregroundColor(.orange)
                             .padding(.top, 4)
+                    }
+                }
+                .padding()
+                .background(.ultraThinMaterial.opacity(0.5), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+                
+                // Section Mise à jour
+                VStack(alignment: .leading, spacing: 16) {
+                    HStack(spacing: 12) {
+                        Image(systemName: "arrow.down.circle.fill")
+                            .font(.title2)
+                            .foregroundColor(.green)
+                            .symbolRenderingMode(.hierarchical)
+                        Text("Mises à jour")
+                            .font(.title2.bold())
+                            .foregroundColor(.white)
+                    }
+
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Version actuelle")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                            Text(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "N/A")
+                                .font(.subheadline)
+                                .foregroundColor(.white.opacity(0.7))
+                        }
+                        Spacer()
+                        Button(action: {
+                            updaterController.checkForUpdates(nil)
+                        }) {
+                            Label("Vérifier", systemImage: "arrow.down.circle")
+                                .font(.headline)
+                        }
+                        .buttonStyle(GlassButtonStyle(color: .green))
                     }
                 }
                 .padding()

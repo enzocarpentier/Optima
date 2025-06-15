@@ -11,8 +11,8 @@ class AIService: ObservableObject {
     @Published var progress: Double = 0.0
     @Published var currentTask: String = ""
 
-    private let geminiAPIURLString = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key="
-    private let geminiModelName = "gemini-1.5-flash-latest"
+    private let geminiAPIURLString = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key="
+    private let geminiModelName = "gemini-2.0-flash-lite"
 
     private init() {}
 
