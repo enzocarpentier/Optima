@@ -3,6 +3,8 @@
     <channel>
         <title>Optima</title>
         <item>
+
+ HEAD
             <title>1.0.3</title>
             <pubDate>Sun, 15 Jun 2025 07:20:24 +0200</pubDate>
             <sparkle:version>4</sparkle:version>
@@ -16,6 +18,10 @@
         <item>
             <title>1.0.1</title>
             <pubDate>Sun, 15 Jun 2025 04:11:33 +0200</pubDate>
+
+            <title>1.0.1</title>
+            <pubDate>Sun, 15 Jun 2025 03:05:21 +0200</pubDate>
+ 3958982c9eb08ed867150d3144596a829ca57704
             <sparkle:version>2</sparkle:version>
             <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
@@ -23,11 +29,19 @@
         </item>
         <item>
             <title>1.0</title>
+ HEAD
             <pubDate>Sun, 15 Jun 2025 04:11:34 +0200</pubDate>
             <sparkle:version>1</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
             <enclosure url="Optima-1.0.zip" length="1744959" type="application/octet-stream"/>
+
+            <pubDate>Sat, 14 Jun 2025 15:48:32 +0200</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v1.0/Optima-1.0.zip" length="1744959" type="application/octet-stream"/>
+ 3958982c9eb08ed867150d3144596a829ca57704
         </item>
     </channel>
 </rss>
