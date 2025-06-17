@@ -10,43 +10,27 @@
 		55F5A2802DFD92B70005AA10 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 55F5A27F2DFD92B70005AA10 /* Sparkle */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		55318D0D2DF721C3000B0EC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 55318CF62DF721BF000B0EC6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55318CFD2DF721BF000B0EC6;
-			remoteInfo = Optima;
-		};
-		55318D172DF721C3000B0EC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 55318CF62DF721BF000B0EC6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55318CFD2DF721BF000B0EC6;
-			remoteInfo = Optima;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		55318CFE2DF721BF000B0EC6 /* Optima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Optima.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		55318D0C2DF721C3000B0EC6 /* OptimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptimaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		55318D162DF721C3000B0EC6 /* OptimaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptimaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		55E87C122E01B14700EC328A /* Exceptions for "Optima" folder in "Optima" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 55318CFD2DF721BF000B0EC6 /* Optima */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		55318D002DF721BF000B0EC6 /* Optima */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				55E87C122E01B14700EC328A /* Exceptions for "Optima" folder in "Optima" target */,
+			);
 			path = Optima;
-			sourceTree = "<group>";
-		};
-		55318D0F2DF721C3000B0EC6 /* OptimaTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = OptimaTests;
-			sourceTree = "<group>";
-		};
-		55318D192DF721C3000B0EC6 /* OptimaUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = OptimaUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -60,20 +44,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55318D092DF721C3000B0EC6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55318D132DF721C3000B0EC6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,8 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				55318D002DF721BF000B0EC6 /* Optima */,
-				55318D0F2DF721C3000B0EC6 /* OptimaTests */,
-				55318D192DF721C3000B0EC6 /* OptimaUITests */,
 				55318CFF2DF721BF000B0EC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,8 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				55318CFE2DF721BF000B0EC6 /* Optima.app */,
-				55318D0C2DF721C3000B0EC6 /* OptimaTests.xctest */,
-				55318D162DF721C3000B0EC6 /* OptimaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,52 +89,6 @@
 			productReference = 55318CFE2DF721BF000B0EC6 /* Optima.app */;
 			productType = "com.apple.product-type.application";
 		};
-		55318D0B2DF721C3000B0EC6 /* OptimaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 55318D232DF721C3000B0EC6 /* Build configuration list for PBXNativeTarget "OptimaTests" */;
-			buildPhases = (
-				55318D082DF721C3000B0EC6 /* Sources */,
-				55318D092DF721C3000B0EC6 /* Frameworks */,
-				55318D0A2DF721C3000B0EC6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				55318D0E2DF721C3000B0EC6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				55318D0F2DF721C3000B0EC6 /* OptimaTests */,
-			);
-			name = OptimaTests;
-			packageProductDependencies = (
-			);
-			productName = OptimaTests;
-			productReference = 55318D0C2DF721C3000B0EC6 /* OptimaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		55318D152DF721C3000B0EC6 /* OptimaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 55318D262DF721C3000B0EC6 /* Build configuration list for PBXNativeTarget "OptimaUITests" */;
-			buildPhases = (
-				55318D122DF721C3000B0EC6 /* Sources */,
-				55318D132DF721C3000B0EC6 /* Frameworks */,
-				55318D142DF721C3000B0EC6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				55318D182DF721C3000B0EC6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				55318D192DF721C3000B0EC6 /* OptimaUITests */,
-			);
-			name = OptimaUITests;
-			packageProductDependencies = (
-			);
-			productName = OptimaUITests;
-			productReference = 55318D162DF721C3000B0EC6 /* OptimaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,14 +101,6 @@
 				TargetAttributes = {
 					55318CFD2DF721BF000B0EC6 = {
 						CreatedOnToolsVersion = 16.4;
-					};
-					55318D0B2DF721C3000B0EC6 = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 55318CFD2DF721BF000B0EC6;
-					};
-					55318D152DF721C3000B0EC6 = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 55318CFD2DF721BF000B0EC6;
 					};
 				};
 			};
@@ -210,28 +122,12 @@
 			projectRoot = "";
 			targets = (
 				55318CFD2DF721BF000B0EC6 /* Optima */,
-				55318D0B2DF721C3000B0EC6 /* OptimaTests */,
-				55318D152DF721C3000B0EC6 /* OptimaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		55318CFC2DF721BF000B0EC6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55318D0A2DF721C3000B0EC6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55318D142DF721C3000B0EC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -248,34 +144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55318D082DF721C3000B0EC6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55318D122DF721C3000B0EC6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		55318D0E2DF721C3000B0EC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 55318CFD2DF721BF000B0EC6 /* Optima */;
-			targetProxy = 55318D0D2DF721C3000B0EC6 /* PBXContainerItemProxy */;
-		};
-		55318D182DF721C3000B0EC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 55318CFD2DF721BF000B0EC6 /* Optima */;
-			targetProxy = 55318D172DF721C3000B0EC6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		55318D1E2DF721C3000B0EC6 /* Debug */ = {
@@ -315,6 +184,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = None;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -376,10 +246,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = None;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -395,8 +267,13 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_USE_PROJECT_SETTINGS_FOR_SWIFT_SYNTAX_CHECK = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -407,21 +284,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Optima/Optima.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 5GMM466LHA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Optima/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.5;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.enzocarpentier.Optima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -437,94 +316,28 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Optima/Optima.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 5GMM466LHA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Optima/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.5;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.enzocarpentier.Optima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		55318D242DF721C3000B0EC6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5GMM466LHA;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.enzocarpentier.OptimaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Optima.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Optima";
-			};
-			name = Debug;
-		};
-		55318D252DF721C3000B0EC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5GMM466LHA;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.enzocarpentier.OptimaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Optima.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Optima";
-			};
-			name = Release;
-		};
-		55318D272DF721C3000B0EC6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5GMM466LHA;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.enzocarpentier.OptimaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Optima;
-			};
-			name = Debug;
-		};
-		55318D282DF721C3000B0EC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5GMM466LHA;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.enzocarpentier.OptimaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Optima;
 			};
 			name = Release;
 		};
@@ -545,24 +358,6 @@
 			buildConfigurations = (
 				55318D212DF721C3000B0EC6 /* Debug */,
 				55318D222DF721C3000B0EC6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		55318D232DF721C3000B0EC6 /* Build configuration list for PBXNativeTarget "OptimaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				55318D242DF721C3000B0EC6 /* Debug */,
-				55318D252DF721C3000B0EC6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		55318D262DF721C3000B0EC6 /* Build configuration list for PBXNativeTarget "OptimaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				55318D272DF721C3000B0EC6 /* Debug */,
-				55318D282DF721C3000B0EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
