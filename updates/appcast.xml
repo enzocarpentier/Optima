@@ -3,12 +3,12 @@
     <channel>
         <title>Optima</title>
         <item>
-            <title>1.0.4</title>
-            <pubDate>Tue, 17 Jun 2025 00:50:40 +0200</pubDate>
-            <sparkle:version>5</sparkle:version>
-            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+            <title>1.0.5</title>
+            <pubDate>Tue, 17 Jun 2025 15:32:30 +0200</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-            <enclosure url="https://enzocarpentier.github.io/Optima/updates/Optima-1.0.4.zip" length="3390595" type="application/octet-stream" sparkle:edSignature="YBL9dG0JsJa8Z7NTwN0nan9ES2WZ9Ub6XLAlGux2Cd1Ua+OcJLOLxN8U/6Vu1RWOjgMfCwPq+HZb6vLucLumBg=="/>
+            <enclosure url="https://enzocarpentier.github.io/Optima/updates/Optima-1.0.5.zip" length="3582433" type="application/octet-stream" sparkle:edSignature="b/mEFKDhgXwRT2CBDEO4z5iInXDhGC0z+1iDbLabN3lTKMLtY/hfkkCWY7/wGBqm1Lpg9TxUZataUTaHQnH7AQ=="/>
         </item>
     </channel>
 </rss>

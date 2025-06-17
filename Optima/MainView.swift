@@ -91,6 +91,7 @@ struct FloatingParticlesBackground: View {
 struct FloatingNavigation: View {
     @Binding var selection: NavigationItem
     @State private var hoverItem: NavigationItem?
+    @State private var isHovering = false
     
     var body: some View {
         HStack(spacing: 0) {
@@ -145,7 +146,7 @@ struct FloatingNavigation: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 .onHover { hovering in
-                    withAnimation(.easeInOut(duration: 0.2)) {
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                         hoverItem = hovering ? item : nil
                     }
                 }
@@ -171,6 +172,13 @@ struct FloatingNavigation: View {
         )
         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
         .shadow(color: Color.cyan.opacity(0.1), radius: 40, x: 0, y: 0)
+        .scaleEffect(isHovering ? 1.0 : 0.95)
+        .opacity(isHovering ? 1.0 : 0.5)
+        .onHover { hovering in
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                isHovering = hovering
+            }
+        }
     }
 }
 

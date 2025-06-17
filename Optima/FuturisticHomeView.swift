@@ -184,103 +184,125 @@ struct FuturisticHomeView: View {
     
     @State private var showWelcome = false
     @State private var showCards = false
-    @State private var showActivity = false
+    @State private var showWhatsNew = false
     
     var body: some View {
         ZStack {
             UnifiedBackground()
             
-            VStack(spacing: 40) {
-                // En-tête avec animation
-                VStack(spacing: 16) {
-                    // Salutation
-                    HStack {
-                        Text("Bonjour")
-                            .font(.system(size: 28, weight: .light, design: .rounded))
-                            .foregroundColor(.white.opacity(0.8))
+            GeometryReader { geometry in
+                ScrollView {
+                    VStack(spacing: 40) {
+                        // En-tête avec animation
+                        VStack(spacing: 16) {
+                            // Salutation
+                            ZStack {
+                                HStack {
+                                    Text("Bonjour")
+                                        .font(.system(size: 28, weight: .light, design: .rounded))
+                                        .foregroundColor(.white.opacity(0.8))
+                                    
+                                    Text(userName)
+                                        .font(.system(size: 28, weight: .bold, design: .rounded))
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: [
+                                                    .cyan,
+                                                    .blue,
+                                                    .purple
+                                                ],
+                                                startPoint: .leading,
+                                                endPoint: .trailing
+                                            )
+                                        )
+                                }
+
+                                HStack {
+                                    Spacer()
+                                    Button(action: {
+                                        showWhatsNew = true
+                                    }) {
+                                        Image(systemName: "sparkles")
+                                            .font(.system(size: 24, weight: .medium))
+                                            .foregroundColor(.white.opacity(0.8))
+                                            .padding(8)
+                                            .background(.ultraThinMaterial)
+                                            .clipShape(Circle())
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                                    .shadow(radius: 5)
+                                }
+                            }
+                            .opacity(showWelcome ? 1 : 0)
+                            .offset(y: showWelcome ? 0 : 20)
+                            
+                            // Sous-titre
+                            Text("Que souhaitez-vous faire aujourd'hui ?")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundColor(.white.opacity(0.7))
+                                .opacity(showWelcome ? 1 : 0)
+                                .offset(y: showWelcome ? 0 : 20)
+                        }
+                        .padding(.top, 40)
+                        .padding(.horizontal, 40)
                         
-                        Text(userName)
-                            .font(.system(size: 28, weight: .bold, design: .rounded))
-                            .foregroundStyle(
-                                LinearGradient(
-                                    colors: [
-                                        .cyan,
-                                        .blue,
-                                        .purple
-                                    ],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
+                        // Grille de cartes flottantes
+                        LazyVGrid(columns: [
+                            GridItem(.flexible(), spacing: 20),
+                            GridItem(.flexible(), spacing: 20)
+                        ], spacing: 20) {
+                            FloatingGlassCard(
+                                title: "Étudier",
+                                subtitle: "Accéder à vos fiches",
+                                icon: "brain.head.profile",
+                                color: .blue,
+                                action: { selectedTab = .study }
                             )
+                            .opacity(showCards ? 1 : 0)
+                            .offset(y: showCards ? 0 : 30)
+                            .animation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.1), value: showCards)
+                            
+                            FloatingGlassCard(
+                                title: "Bibliothèque",
+                                subtitle: "Accéder à vos documents",
+                                icon: "books.vertical.fill",
+                                color: .purple,
+                                action: { selectedTab = .library }
+                            )
+                            .opacity(showCards ? 1 : 0)
+                            .offset(y: showCards ? 0 : 30)
+                            .animation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.2), value: showCards)
+                            
+                            FloatingGlassCard(
+                                title: "Historique",
+                                subtitle: "Voir vos activités récentes",
+                                icon: "clock.arrow.circlepath",
+                                color: .orange,
+                                action: { selectedTab = .history }
+                            )
+                            .opacity(showCards ? 1 : 0)
+                            .offset(y: showCards ? 0 : 30)
+                            .animation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.3), value: showCards)
+                            
+                            FloatingGlassCard(
+                                title: "Paramètres",
+                                subtitle: "Configurer l'application",
+                                icon: "gearshape.fill",
+                                color: .gray,
+                                action: { selectedTab = .settings }
+                            )
+                            .opacity(showCards ? 1 : 0)
+                            .offset(y: showCards ? 0 : 30)
+                            .animation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.4), value: showCards)
+                        }
+                        .padding(.horizontal, 40) // Augmenter le padding pour plus d'espace
+                        
+                        Spacer()
                     }
-                    .opacity(showWelcome ? 1 : 0)
-                    .offset(y: showWelcome ? 0 : 20)
-                    
-                    // Sous-titre
-                    Text("Que souhaitez-vous faire aujourd'hui ?")
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(.white.opacity(0.7))
-                        .opacity(showWelcome ? 1 : 0)
-                        .offset(y: showWelcome ? 0 : 20)
+                    .padding(.bottom, 120) // Espace pour la navigation flottante
+                    .frame(minHeight: geometry.size.height)
                 }
-                .padding(.top, 40)
-                
-                Spacer()
-                
-                // Grille de cartes flottantes
-                LazyVGrid(columns: [
-                    GridItem(.flexible(), spacing: 20),
-                    GridItem(.flexible(), spacing: 20)
-                ], spacing: 20) {
-                    FloatingGlassCard(
-                        title: "Étudier",
-                        subtitle: "Accéder à vos fiches",
-                        icon: "brain.head.profile",
-                        color: .blue,
-                        action: { selectedTab = .study }
-                    )
-                    .opacity(showCards ? 1 : 0)
-                    .offset(y: showCards ? 0 : 30)
-                    .animation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.1), value: showCards)
-                    
-                    FloatingGlassCard(
-                        title: "Bibliothèque",
-                        subtitle: "Accéder à vos documents",
-                        icon: "books.vertical.fill",
-                        color: .purple,
-                        action: { selectedTab = .library }
-                    )
-                    .opacity(showCards ? 1 : 0)
-                    .offset(y: showCards ? 0 : 30)
-                    .animation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.2), value: showCards)
-                    
-                    FloatingGlassCard(
-                        title: "Historique",
-                        subtitle: "Voir vos activités récentes",
-                        icon: "clock.arrow.circlepath",
-                        color: .orange,
-                        action: { selectedTab = .history }
-                    )
-                    .opacity(showCards ? 1 : 0)
-                    .offset(y: showCards ? 0 : 30)
-                    .animation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.3), value: showCards)
-                    
-                    FloatingGlassCard(
-                        title: "Paramètres",
-                        subtitle: "Configurer l'application",
-                        icon: "gearshape.fill",
-                        color: .gray,
-                        action: { selectedTab = .settings }
-                    )
-                    .opacity(showCards ? 1 : 0)
-                    .offset(y: showCards ? 0 : 30)
-                    .animation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.4), value: showCards)
-                }
-                .padding(.horizontal, 40) // Augmenter le padding pour plus d'espace
-                
-                Spacer()
             }
-            .padding(.bottom, 120) // Espace pour la navigation flottante
         }
         .onAppear {
             // Animations séquentielles
@@ -291,6 +313,9 @@ struct FuturisticHomeView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 showCards = true
             }
+        }
+        .sheet(isPresented: $showWhatsNew) {
+            WhatsNewView()
         }
     }
 }
