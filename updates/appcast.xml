@@ -3,45 +3,12 @@
     <channel>
         <title>Optima</title>
         <item>
-
- HEAD
-            <title>1.0.3</title>
-            <pubDate>Sun, 15 Jun 2025 07:20:24 +0200</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
-            <enclosure url="https://enzocarpentier.github.io/Optima/updates/Optima-1.0.3.zip" length="2975667" type="application/octet-stream" sparkle:edSignature="m6PoUn1kICBKpvEZCkE2FUHFRtYKsDWWBDJUSsUprWJPOIQQPAJIqH5VEgFLjNAcT/3Gdbyegf/lFB+vzZ88Cw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://enzocarpentier.github.io/Optima/updates/Optima4-2.delta" sparkle:deltaFrom="2" length="1479190" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864640" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="XMSGtui2QiY3dNEm3pDiBwKhS6Tf7zf8YWY57Xq1qUBo41Qae7otuoPA1IipgczC/th/qmG91T8vlY6zYsbHAA=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.0.1</title>
-            <pubDate>Sun, 15 Jun 2025 04:11:33 +0200</pubDate>
-
-            <title>1.0.1</title>
-            <pubDate>Sun, 15 Jun 2025 03:05:21 +0200</pubDate>
- 3958982c9eb08ed867150d3144596a829ca57704
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <title>1.0.4</title>
+            <pubDate>Tue, 17 Jun 2025 00:50:40 +0200</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-            <enclosure url="https://enzocarpentier.github.io/Optima/updates/Optima-1.0.1.zip" length="1746605" type="application/octet-stream" sparkle:edSignature="HwqGPl8aeYQCNPSCiemA4P/2P01W3hQUZ/U30T3VQhfpiN1yvOVBVSbAQCcH8fJZcebQtdbOPm6yTLfERO98BQ=="/>
-        </item>
-        <item>
-            <title>1.0</title>
- HEAD
-            <pubDate>Sun, 15 Jun 2025 04:11:34 +0200</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-            <enclosure url="Optima-1.0.zip" length="1744959" type="application/octet-stream"/>
-
-            <pubDate>Sat, 14 Jun 2025 15:48:32 +0200</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v1.0/Optima-1.0.zip" length="1744959" type="application/octet-stream"/>
- 3958982c9eb08ed867150d3144596a829ca57704
+            <enclosure url="https://enzocarpentier.github.io/Optima/updates/Optima-1.0.4.zip" length="3390595" type="application/octet-stream" sparkle:edSignature="YBL9dG0JsJa8Z7NTwN0nan9ES2WZ9Ub6XLAlGux2Cd1Ua+OcJLOLxN8U/6Vu1RWOjgMfCwPq+HZb6vLucLumBg=="/>
         </item>
     </channel>
 </rss>
