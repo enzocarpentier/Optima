@@ -6,6 +6,39 @@
         <description>Mises à jour automatiques pour Optima - Votre tuteur IA personnel</description>
         <language>fr</language>
         
+        <!-- Version 0.2.1 - Correction bug Sparkle -->
+        <item>
+            <title>Version 0.2.1 - Correction du système de mises à jour</title>
+            <description><![CDATA[
+                <h2>🔧 Optima v0.2.1 - Correction critique !</h2>
+                
+                <h3>🛠️ Corrections :</h3>
+                <ul>
+                    <li><strong>🔧 Bug Sparkle corrigé</strong> - Système de mises à jour maintenant fiable</li>
+                    <li><strong>⚡ Stabilité améliorée</strong> - Plus d'erreurs lors des mises à jour</li>
+                    <li><strong>🔗 URLs corrigées</strong> - Communication serveur optimisée</li>
+                </ul>
+                
+                <h3>✨ Conservé de v0.2.0 :</h3>
+                <ul>
+                    <li>🎯 Nouvelle icône d'application modernisée</li>
+                    <li>📱 Interface rafraîchie</li>
+                </ul>
+                
+                <p><strong>Mise à jour fortement recommandée</strong> pour un système de mises à jour fiable !</p>
+            ]]></description>
+            <pubDate>Fri, 28 Jun 2025 13:49:00 +0000</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+            <link>https://github.com/enzocarpentier/Optima/releases/tag/v0.2.1</link>
+            <enclosure 
+                url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.1/Optima-0.2.1-Universal.zip"
+                length="5164191"
+                type="application/zip"
+                sparkle:edSignature="Y9v7viZtjNgyBzuWlqcwzisFUQ49zzgfnJtVSkGeSv+RiQZhU2oR/2th75sHM2oKIZSfMitpSOCHXjxE/xBA==" />
+        </item>
+        
         <!-- Version 0.2.0 - Nouvelle icône -->
         <item>
             <title>Version 0.2.0 - Nouvelle icône d'application</title>
