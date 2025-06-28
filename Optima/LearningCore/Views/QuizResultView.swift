@@ -34,4 +34,16 @@ struct QuizResultView: View {
         .padding(40)
         .frame(maxWidth: 500)
     }
+}
+
+struct QuizResultView_Previews: PreviewProvider {
+    static var previews: some View {
+        QuizResultView(viewModel: QuizPlayerViewModel(quiz: Quiz(title: "Test Quiz", questions: [])))
+    }
+}
+
+struct QuizResultView_Previews: PreviewProvider {
+    static var previews: some View {
+        QuizResultView(viewModel: QuizPlayerViewModel(quiz: Quiz(title: "Test Quiz", questions: [])))
+    }
 } 
