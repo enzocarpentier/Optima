@@ -21,8 +21,6 @@
 	<!-- === Configuration Sparkle === -->
 	<key>SUFeedURL</key>
 	<string>https://raw.githubusercontent.com/enzocarpentier/Optima/main/appcast.xml</string>
-	<key>SUPublicEDKey</key>
-	<string>aA1BdDHt9uvISzvRoAxKmZjJDZ1y/B54QRSfY7N+qxA=</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUScheduledCheckInterval</key>
