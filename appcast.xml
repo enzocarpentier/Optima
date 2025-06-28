@@ -7,7 +7,8 @@
       <pubDate>Sat, 28 Jun 2025 19:49:30 +0200</pubDate>
       <sparkle:version>11</sparkle:version>
       <sparkle:shortVersionString>0.2.7</sparkle:shortVersionString>
-      <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.7/Optima-0.2.7.zip" length="3896171" type="application/octet-stream" sparkle:edSignature="sparkle:edSignature="VkIJJ+GeRLo91iYJJiSKAwIrwaHmJVVmte9Sl6tbX05lZI50qOLF3pPaAqAmDT08NmuPoCxm5ZKyixN+lCyyCg==" length="3896171""/>
+      <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.7/Optima-0.2.7.zip" length="3896171" type="application/octet-stream"/>
     </item>
   </channel>
 </rss>
