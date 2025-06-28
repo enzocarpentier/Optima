@@ -8,7 +8,7 @@
             <sparkle:version>11</sparkle:version>
             <sparkle:shortVersionString>0.2.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.7/Optima-0.2.7.zip" length="3896171" type="application/octet-stream" sparkle:edSignature=""/>
+            <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.7/Optima-0.2.7.zip" length="3896171" type="application/octet-stream" sparkle:edSignature="sparkle:edSignature="Dkao+FeloZVw/5kYnxXFAVjxKlFIBLngNYzh3V8Xxeu/avDZ+p3J9XgChWuavOUFAAVOuw6KBP6sHu9d1XvhBA==" length="3380462""/>
         </item>
         <item>
             <title>0.2.6</title>
@@ -16,7 +16,7 @@
             <sparkle:version>10</sparkle:version>
             <sparkle:shortVersionString>0.2.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.6/Optima-0.2.6.zip" length="3380462" type="application/octet-stream" sparkle:edSignature=""/>
+            <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.6/Optima-0.2.6.zip" length="3380462" type="application/octet-stream" sparkle:edSignature="sparkle:edSignature="Dkao+FeloZVw/5kYnxXFAVjxKlFIBLngNYzh3V8Xxeu/avDZ+p3J9XgChWuavOUFAAVOuw6KBP6sHu9d1XvhBA==" length="3380462""/>
         </item>
     </channel>
 </rss>
