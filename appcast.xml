@@ -6,6 +6,62 @@
         <description>Mises à jour automatiques pour Optima - Votre tuteur IA personnel</description>
         <language>fr</language>
         
+        <!-- Version 0.2.2 - Nouvelles fonctionnalités -->
+        <item>
+            <title>Version 0.2.2 - Fonctionnalités avancées</title>
+            <description><![CDATA[
+                <h2>🚀 Optima v0.2.2 - Nouvelles fonctionnalités !</h2>
+                
+                <h3>✨ Nouveautés de cette version :</h3>
+                <ul>
+                    <li><strong>📊 Interface Analytics améliorée</strong> - Meilleurs graphiques de progression</li>
+                    <li><strong>🎯 Moteur IA optimisé</strong> - Réponses plus rapides et précises</li>
+                    <li><strong>📚 Gestion documentaire renforcée</strong> - Support de nouveaux formats</li>
+                    <li><strong>🔧 Corrections diverses</strong> - Stabilité et performance</li>
+                </ul>
+                
+                <p>Une mise à jour riche en améliorations pour une expérience optimale !</p>
+            ]]></description>
+            <pubDate>Sat, 28 Jun 2025 15:40:51 +0200</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>0.2.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+            <link>https://github.com/enzocarpentier/Optima/releases/tag/v0.2.2</link>
+            <enclosure 
+                url="https://raw.githubusercontent.com/enzocarpentier/Optima/main/Optima-0.2.2-Universal.zip"
+                length="5149438"
+                type="application/octet-stream"
+                sparkle:edSignature="iMJZKMle7NtfHBQDiY4nDRobiKdGLen5wjPWqCDXD33aIk1oSBmGRTp9bghBNcFBpMDyzhw8pW+sLszWXy6BBg==" />
+        </item>
+        
+        <!-- Version 0.2.1 - Nouvelles clés Sparkle -->
+        <item>
+            <title>Version 0.2.1 - Système de mise à jour amélioré</title>
+            <description><![CDATA[
+                <h2>🔐 Optima v0.2.1 - Mises à jour sécurisées !</h2>
+                
+                <h3>🔧 Améliorations importantes :</h3>
+                <ul>
+                    <li><strong>🔐 Nouvelles clés de signature Sparkle</strong> - Sécurité renforcée</li>
+                    <li><strong>🔄 Système de mise à jour corrigé</strong> - Fiabilité maximale</li>
+                    <li><strong>📊 Rapports d'erreur améliorés</strong> - Meilleur diagnostic</li>
+                    <li><strong>⚡ Optimisations de performance</strong> - Application plus fluide</li>
+                </ul>
+                
+                <p>Cette mise à jour corrige définitivement les problèmes de mises à jour automatiques !</p>
+            ]]></description>
+            <pubDate>Sat, 28 Jun 2025 15:21:22 +0200</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+            <link>https://github.com/enzocarpentier/Optima/releases/tag/v0.2.1</link>
+            <enclosure 
+                url="https://raw.githubusercontent.com/enzocarpentier/Optima/main/Optima-0.2.1-Universal.zip"
+                length="5150891"
+                type="application/octet-stream"
+                sparkle:edSignature="xDKqe0xVRL3W6tLSSQyF9PVsJFa0Du1JVL1uvhrsbzJ7btQZZ+m7vHhmpqq0HknWCV4Y6HfOxnSE9xjVEGpWCw==" />
+        </item>
+        
         <!-- Version 0.2.0 - Nouvelle icône -->
         <item>
             <title>Version 0.2.0 - Nouvelle icône d'application</title>
