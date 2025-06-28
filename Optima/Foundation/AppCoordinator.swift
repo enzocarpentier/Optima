@@ -8,7 +8,6 @@
 
 import SwiftUI
 import Combine
-import Sparkle
 
 /// Coordinateur principal qui orchestre l'ensemble de l'application
 /// Responsabilité : État global, navigation, communication inter-modules
@@ -33,22 +32,11 @@ final class AppCoordinator: ObservableObject {
     let aiService = AIService() // Public pour accès depuis les vues
     let analyticsService = AnalyticsService() // Public pour accès depuis les vues
     
-    // Contrôleur de mise à jour Sparkle
-    private let updaterController: SPUStandardUpdaterController
-    
-    /// Objet `updater` exposé pour les vues SwiftUI
-    var updater: SPUUpdater {
-        updaterController.updater
-    }
-    
     // MARK: - Données Applicatives
     @Published var documents: [DocumentModel] = []
     @Published var isProcessingDocument = false
     
     init() {
-        // Initialisation du contrôleur de mise à jour Sparkle
-        self.updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
-        
         Task {
             await setupApplication()
         }
@@ -253,13 +241,6 @@ final class AppCoordinator: ObservableObject {
         }
     }
     
-    /// Vérifie les mises à jour manuellement
-    func checkForUpdates() {
-        // La nouvelle vue de menu appelle directement l'action de l'updater.
-        // On peut garder cette fonction pour des appels programmatiques si besoin.
-        updaterController.checkForUpdates(nil)
-    }
-    
     /// Affiche les raccourcis clavier
     func showKeyboardShortcuts() {
         // TODO: Créer une fenêtre dédiée aux raccourcis
@@ -269,7 +250,6 @@ final class AppCoordinator: ObservableObject {
         print("⌘⇧A - Assistant IA")
         print("⌘⇧S - Statistiques")
         print("⌘1-4 - Navigation rapide")
-        print("⌘U - Vérifier les mises à jour")
         print("⌘? - Ce guide")
     }
     

@@ -98,15 +98,6 @@ struct OptimaCommands: Commands {
             .help("Configurer les paramètres de l'application (⌘,)")
         }
         
-        // MARK: - Menu Application (Mises à jour)
-        CommandGroup(after: .appInfo) {
-            CheckForUpdatesView(updater: coordinator.updater)
-                .keyboardShortcut("u", modifiers: .command)
-                .help("Vérifier s'il existe une nouvelle version d'Optima (⌘U)")
-            
-            Divider()
-        }
-        
         // MARK: - Menu Aide
         CommandGroup(after: .help) {
             Button("Guide d'utilisation d'Optima") {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55041C9F2E0F4D81003DE01D /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 55041C9E2E0F4D81003DE01D /* Sparkle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55041C9F2E0F4D81003DE01D /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,11 +81,21 @@
 			);
 			name = Optima;
 			packageProductDependencies = (
-				55041C9E2E0F4D81003DE01D /* Sparkle */,
 			);
 			productName = Optima;
 			productReference = 55041C2D2E0D5FEB003DE01D /* Optima.app */;
 			productType = "com.apple.product-type.application";
+			mainGroup = 55041C242E0D5FEA003DE01D;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 55041C2E2E0D5FEB003DE01D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55041C2C2E0D5FEA003DE01D /* Optima */,
+			);
 		};
 /* End PBXNativeTarget section */
 
@@ -114,7 +122,6 @@
 			mainGroup = 55041C242E0D5FEA003DE01D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				55041C9D2E0F4D81003DE01D /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 55041C2E2E0D5FEB003DE01D /* Products */;
@@ -135,6 +142,9 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55041C292E0D5FEA003DE01D /* Sources */ = {
@@ -269,11 +279,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Optima/Optima.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -294,7 +303,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 0.2.7;
+				MARKETING_VERSION = 0.3.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.enzocarpentier.Optima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,11 +324,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Optima/Optima.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -340,7 +348,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 0.2.7;
+				MARKETING_VERSION = 0.3.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.enzocarpentier.Optima;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,22 +388,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		55041C9D2E0F4D81003DE01D /* XCRemoteSwiftPackageReference "Sparkle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sparkle-project/Sparkle";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.7.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		55041C9E2E0F4D81003DE01D /* Sparkle */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 55041C9D2E0F4D81003DE01D /* XCRemoteSwiftPackageReference "Sparkle" */;
-			productName = Sparkle;
-		};
 /* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55041C252E0D5FEA003DE01D /* Project object */;
