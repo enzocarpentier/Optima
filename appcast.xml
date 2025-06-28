@@ -21,16 +21,16 @@
                 
                 <p><strong>Mise à jour recommandée</strong> pour profiter de la nouvelle interface !</p>
             ]]></description>
-            <pubDate>Fri, 28 Jun 2025 12:47:00 +0000</pubDate>
+            <pubDate>Fri, 28 Jun 2025 13:07:00 +0000</pubDate>
             <sparkle:version>2</sparkle:version>
             <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
             <link>https://github.com/enzocarpentier/Optima/releases/tag/v0.2.0</link>
             <enclosure 
-                url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.0/Optima-0.2.0-Universal.dmg"
-                length="3695761"
-                type="application/octet-stream"
-                sparkle:edSignature="ZTnlWwJ+QqCpDVo/7kpO/dyISB8Yh67lbN/iv/PxRuypZgYO4i+hWwi/QRIqTeSxD5it8BuK5kPgka8qbCg==" />
+                url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.0/Optima-0.2.0-Universal.zip"
+                length="5161917"
+                type="application/zip"
+                sparkle:edSignature="J18f1DucCKSWEQfoKlaZy4DbVOVjdFjmIrE5ATnKN174DFyWKPXTvmkfHJbVDJYu4ogGa1wdKjf69JKNVDzEDg==" />
         </item>
         
         <!-- Version 0.1.0 - Version initiale -->
