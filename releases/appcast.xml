@@ -4,19 +4,11 @@
     <title>Optima</title>
     <item>
       <title>Version 0.3.0</title>
-      <pubDate>Sat, 28 Jun 2025 23:15:00 +0200</pubDate>
+      <pubDate>Sat, 28 Jun 2025 23:50:00 +0200</pubDate>
       <sparkle:version>14</sparkle:version>
       <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.3.0/Optima-0.3.0.zip" length="3896115" type="application/octet-stream" sparkle:edSignature="VkIJJ+GeRLo91iYJJiSKAwIrwaHmJVVmte9Sl6tbX05lZI50qOLF3pPaAqAmDT08NmuPoCxm5ZKyixN+lCyyCg=="/>
-    </item>
-    <item>
-      <title>Version 0.2.9</title>
-      <pubDate>Sat, 28 Jun 2025 23:07:00 +0200</pubDate>
-      <sparkle:version>13</sparkle:version>
-      <sparkle:shortVersionString>0.2.9</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.9/Optima-0.2.9.zip" length="3897140" type="application/octet-stream" sparkle:edSignature="VkIJJ+GeRLo91iYJJiSKAwIrwaHmJVVmte9Sl6tbX05lZI50qOLF3pPaAqAmDT08NmuPoCxm5ZKyixN+lCyyCg=="/>
+      <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.3.0/Optima-0.3.0.zip" length="3896115" type="application/octet-stream" sparkle:edSignature=""/>
     </item>
   </channel>
 </rss>
