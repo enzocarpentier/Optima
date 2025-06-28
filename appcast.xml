@@ -6,53 +6,19 @@
         <description>Mises à jour automatiques pour Optima - Votre tuteur IA personnel</description>
         <language>fr</language>
         
-        <!-- Version 0.2.1 - Correction bug Sparkle -->
-        <item>
-            <title>Version 0.2.1 - Correction du système de mises à jour</title>
-            <description><![CDATA[
-                <h2>🔧 Optima v0.2.1 - Correction critique !</h2>
-                
-                <h3>🛠️ Corrections :</h3>
-                <ul>
-                    <li><strong>🔧 Bug Sparkle corrigé</strong> - Système de mises à jour maintenant fiable</li>
-                    <li><strong>⚡ Stabilité améliorée</strong> - Plus d'erreurs lors des mises à jour</li>
-                    <li><strong>🔗 URLs corrigées</strong> - Communication serveur optimisée</li>
-                </ul>
-                
-                <h3>✨ Conservé de v0.2.0 :</h3>
-                <ul>
-                    <li>🎯 Nouvelle icône d'application modernisée</li>
-                    <li>📱 Interface rafraîchie</li>
-                </ul>
-                
-                <p><strong>Mise à jour fortement recommandée</strong> pour un système de mises à jour fiable !</p>
-            ]]></description>
-            <pubDate>Fri, 28 Jun 2025 13:49:00 +0000</pubDate>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-            <link>https://github.com/enzocarpentier/Optima/releases/tag/v0.2.1</link>
-            <enclosure 
-                url="https://github.com/enzocarpentier/Optima/releases/download/v0.2.1/Optima-0.2.1-Universal.zip"
-                length="5164191"
-                type="application/zip"
-                sparkle:edSignature="Y9v7viZtjNgyBzuWlqcwzisFUQ49zzgfnJtVSkGeSv+RiQZhU2oR/2th75sHM2oKIZSfMitpSOCHXjxE/xBA==" />
-        </item>
-        
         <!-- Version 0.2.0 - Nouvelle icône -->
         <item>
             <title>Version 0.2.0 - Nouvelle icône d'application</title>
             <description><![CDATA[
-                <h2>🎨 Optima v0.2.0 - Nouvelle identité visuelle !</h2>
+                <h2>✨ Optima v0.2.0 - Nouvelle icône !</h2>
                 
-                <h3>✨ Nouveautés :</h3>
+                <h3>✨ Conservé de v0.2.0 :</h3>
                 <ul>
-                    <li><strong>🎯 Nouvelle icône d'application</strong> - Design modernisé et professionnel</li>
-                    <li><strong>📱 Interface rafraîchie</strong> - Meilleure cohérence visuelle</li>
-                    <li><strong>🔧 Optimisations mineures</strong> - Performance améliorée</li>
+                    <li><strong>🎨 Nouvelle icône d'application modernisée</strong></li>
+                    <li><strong>📱 Interface rafraîchie</strong></li>
                 </ul>
                 
-                <p><strong>Mise à jour recommandée</strong> pour profiter de la nouvelle interface !</p>
+                <p>Mise à jour fortement recommandée pour un système de mises à jour fiable !</p>
             ]]></description>
             <pubDate>Fri, 28 Jun 2025 13:07:00 +0000</pubDate>
             <sparkle:version>2</sparkle:version>
@@ -70,8 +36,17 @@
         <item>
             <title>Version 0.1.0 - Lancement d'Optima</title>
             <description><![CDATA[
-                <h2>🎉 Bienvenue dans Optima v0.1.0 !</h2>
-                <p>Première version publique de votre tuteur IA personnel.</p>
+                <h2>🚀 Optima v0.1.0 - Première release !</h2>
+                
+                <h3>🎯 Fonctionnalités principales :</h3>
+                <ul>
+                    <li><strong>📚 Bibliothèque intelligente</strong> - Organisez vos documents d'étude</li>
+                    <li><strong>🤖 IA intégrée</strong> - Votre tuteur personnel disponible 24/7</li>
+                    <li><strong>📊 Analytics d'apprentissage</strong> - Suivez vos progrès</li>
+                    <li><strong>⚡ Performance native</strong> - Application SwiftUI optimisée</li>
+                </ul>
+                
+                <p>Bienvenue dans l'avenir de l'apprentissage personnalisé !</p>
             ]]></description>
             <pubDate>Fri, 28 Jun 2025 08:00:00 +0000</pubDate>
             <sparkle:version>1</sparkle:version>
