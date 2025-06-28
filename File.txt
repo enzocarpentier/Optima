@@ -1,1 +1,0 @@
-1zip -r "../Optima-0.2.0-Universal.zip" "Optima.app"

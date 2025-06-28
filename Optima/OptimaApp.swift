@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import Sparkle
 
 // 🔑 CORRECTION : Imports manquants pour résoudre les erreurs de compilation
 // Ces imports sont nécessaires pour que les commandes menu fonctionnent correctement

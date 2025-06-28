@@ -8,8 +8,6 @@ import SwiftUI
 struct AdvancedSettingsView: View {
     @AppStorage("enableDebugMode") private var enableDebugMode: Bool = false
     @AppStorage("maxCacheSize") private var maxCacheSize: Int = 100
-    @AppStorage("AutomaticUpdateCheck") private var automaticUpdateCheck: Bool = true
-    @AppStorage("AutomaticDownload") private var automaticDownload: Bool = false
     
     @EnvironmentObject var coordinator: AppCoordinator
     
@@ -18,45 +16,18 @@ struct AdvancedSettingsView: View {
             VStack(spacing: 24) {
                 
                 settingsSection(title: "Mises à jour", icon: "arrow.triangle.2.circlepath") {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Toggle("Vérifier automatiquement les mises à jour", isOn: $automaticUpdateCheck)
-                            .onChange(of: automaticUpdateCheck) { oldValue, newValue in
-                                coordinator.updateService.updatePreferences(
-                                    automaticCheck: newValue,
-                                    automaticDownload: automaticDownload
-                                )
-                            }
-                        
-                        Toggle("Télécharger automatiquement les mises à jour", isOn: $automaticDownload)
-                            .disabled(!automaticUpdateCheck)
-                            .onChange(of: automaticDownload) { oldValue, newValue in
-                                coordinator.updateService.updatePreferences(
-                                    automaticCheck: automaticUpdateCheck,
-                                    automaticDownload: newValue
-                                )
-                            }
-                        
-                        HStack {
-                            Button("Vérifier maintenant") {
-                                coordinator.checkForUpdates()
-                            }
-                            .buttonStyle(.bordered)
-                            .controlSize(.small)
-                            .disabled(coordinator.updateService.isCheckingForUpdates)
-                            
-                            Spacer()
-                            
-                            Text(coordinator.updateService.currentStatus)
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
+                    UpdaterSettingsView(updater: coordinator.updater)
+                    
+                    Divider().padding(.vertical, 4)
+                    
+                    HStack {
+                        Button("Vérifier maintenant") {
+                            coordinator.updater.checkForUpdates()
                         }
+                        .buttonStyle(.bordered)
+                        .controlSize(.small)
                         
-                        if !automaticUpdateCheck {
-                            Text("💡 Les vérifications automatiques permettent de rester à jour facilement")
-                                .font(.caption)
-                                .foregroundStyle(.blue)
-                                .padding(.leading, 20)
-                        }
+                        Spacer()
                     }
                 }
                 

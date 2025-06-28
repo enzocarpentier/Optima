@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
+import Sparkle
 
 /// Coordinateur principal qui orchestre l'ensemble de l'application
 /// Responsabilité : État global, navigation, communication inter-modules
@@ -31,13 +32,23 @@ final class AppCoordinator: ObservableObject {
     private let persistenceService = PersistenceService()
     let aiService = AIService() // Public pour accès depuis les vues
     let analyticsService = AnalyticsService() // Public pour accès depuis les vues
-    let updateService = UpdateService() // Service de mise à jour Sparkle
+    
+    // Contrôleur de mise à jour Sparkle
+    private let updaterController: SPUStandardUpdaterController
+    
+    /// Objet `updater` exposé pour les vues SwiftUI
+    var updater: SPUUpdater {
+        updaterController.updater
+    }
     
     // MARK: - Données Applicatives
     @Published var documents: [DocumentModel] = []
     @Published var isProcessingDocument = false
     
     init() {
+        // Initialisation du contrôleur de mise à jour Sparkle
+        self.updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
+        
         Task {
             await setupApplication()
         }
@@ -56,13 +67,6 @@ final class AppCoordinator: ObservableObject {
         
         await MainActor.run {
             isInitialized = true
-            
-            // ✅ Vérification automatique unique des mises à jour (si activée par l'utilisateur)
-            // Délai de 5 secondes pour permettre à l'UI de se charger complètement
-            // et éviter les conflits avec d'autres initialisations
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                self.updateService.checkForUpdatesAutomaticallyOnStartup()
-            }
         }
     }
     
@@ -251,7 +255,9 @@ final class AppCoordinator: ObservableObject {
     
     /// Vérifie les mises à jour manuellement
     func checkForUpdates() {
-        updateService.checkForUpdatesManually()
+        // La nouvelle vue de menu appelle directement l'action de l'updater.
+        // On peut garder cette fonction pour des appels programmatiques si besoin.
+        updaterController.checkForUpdates(nil)
     }
     
     /// Affiche les raccourcis clavier
@@ -267,13 +273,7 @@ final class AppCoordinator: ObservableObject {
         print("⌘? - Ce guide")
     }
     
-    // MARK: - Debug UpdateService (temporaire)
-    
-    /// Affiche les informations de debug du service de mise à jour
-    func debugUpdateService() {
-        print("🔍 Debug UpdateService:")
-        print(updateService.debugInfo)
-    }
+
 }
 
 // MARK: - Types Navigation

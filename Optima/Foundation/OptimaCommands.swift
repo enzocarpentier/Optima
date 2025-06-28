@@ -100,11 +100,9 @@ struct OptimaCommands: Commands {
         
         // MARK: - Menu Application (Mises à jour)
         CommandGroup(after: .appInfo) {
-            Button("Vérifier les mises à jour...") {
-                coordinator.checkForUpdates()
-            }
-            .keyboardShortcut("u", modifiers: .command)
-            .help("Vérifier s'il existe une nouvelle version d'Optima (⌘U)")
+            CheckForUpdatesView(updater: coordinator.updater)
+                .keyboardShortcut("u", modifiers: .command)
+                .help("Vérifier s'il existe une nouvelle version d'Optima (⌘U)")
             
             Divider()
         }

@@ -1,2 +1,0 @@
-    /// URL du feed Sparkle pour les mises à jour (GitHub Releases)
-    private static let feedURL = "https://raw.githubusercontent.com/enzocarpentier/Optima/main/appcast.xml"
