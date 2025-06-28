@@ -6,6 +6,30 @@
         <description>Mises à jour automatiques pour Optima - Votre tuteur IA personnel</description>
         <language>fr</language>
         
+        <!-- Version 0.2.3 NoSandbox - Fix installation Sparkle -->
+        <item>
+            <title>Version 0.2.3 NoSandbox - Correction installation</title>
+            <description><![CDATA[
+                <h2>🔧 Optima v0.2.3 NoSandbox - Installation corrigée !</h2>
+                
+                <h3>🛠️ Correctifs importants :</h3>
+                <ul>
+                    <li><strong>🔧 Installation Sparkle corrigée</strong> - Fonctionne sans sandbox</li>
+                    <li><strong>⚡ Mises à jour automatiques</strong> - Système entièrement fonctionnel</li>
+                    <li><strong>🔐 Sécurité optimisée</strong> - Permissions minimales requises</li>
+                    <li><strong>🚀 Performance améliorée</strong> - Interface plus fluide</li>
+                </ul>
+                
+                <h3>📋 Notes techniques :</h3>
+                <p>Cette version résout le problème d'installation des mises à jour automatiques en ajustant les permissions système nécessaires.</p>
+            ]]></description>
+            <pubDate>Sat, 28 Jun 2025 14:02:00 +0000</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>0.2.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+            <enclosure url="https://raw.githubusercontent.com/enzocarpentier/Optima/main/Optima-0.2.3-NoSandbox.zip" length="5151051" type="application/octet-stream" sparkle:edSignature="akhpJwIEv/R6jMC11GwTqT1S643xbZ1p4SqwMCNTNTVRHju8hxbzSqQ3accc4D3vFOXkT5/VfdbScJf6oGFyAA=="/>
+        </item>
+        
         <!-- Version 0.2.3 - Améliorations et stabilité -->
         <item>
             <title>Version 0.2.3 - Performance et stabilité améliorées</title>

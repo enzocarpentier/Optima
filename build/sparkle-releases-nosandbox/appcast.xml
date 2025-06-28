@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Optima</title>
+        <item>
+            <title>0.2.3</title>
+            <pubDate>Sat, 28 Jun 2025 16:02:35 +0200</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>0.2.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+            <enclosure url="https://raw.githubusercontent.com/enzocarpentier/Optima/main/Optima-0.2.3-NoSandbox.zip" length="5151051" type="application/octet-stream" sparkle:edSignature="akhpdwIEv/R4jHC116WfqTlS63JxbZ1p4SqwWCNTNTVRHju8hxbzSqQ3accc4DJvFOXkT5/VfdbScJfGo6FyAA=="/>
+        </item>
+    </channel>
+</rss>
