@@ -8,7 +8,7 @@
       <sparkle:version>14</sparkle:version>
       <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.3.0/Optima-0.3.0.zip" length="3896115" type="application/octet-stream" sparkle:edSignature="SIGNATURE_A_REMPLACER"/>
+      <enclosure url="https://github.com/enzocarpentier/Optima/releases/download/v0.3.0/Optima-0.3.0.zip" length="3896115" type="application/octet-stream" sparkle:edSignature="VkIJJ+GeRLo91iYJJiSKAwIrwaHmJVVmte9Sl6tbX05lZI50qOLF3pPaAqAmDT08NmuPoCxm5ZKyixN+lCyyCg=="/>
     </item>
     <item>
       <title>Version 0.2.9</title>
