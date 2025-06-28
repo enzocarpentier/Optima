@@ -6,6 +6,34 @@
         <description>Mises à jour automatiques pour Optima - Votre tuteur IA personnel</description>
         <language>fr</language>
         
+        <!-- Version 0.2.3 - Améliorations et stabilité -->
+        <item>
+            <title>Version 0.2.3 - Performance et stabilité améliorées</title>
+            <description><![CDATA[
+                <h2>⚡ Optima v0.2.3 - Performance optimisée !</h2>
+                
+                <h3>🔧 Améliorations de cette version :</h3>
+                <ul>
+                    <li><strong>⚡ Optimisations de performance</strong> - Interface plus fluide</li>
+                    <li><strong>🛡️ Stabilité renforcée</strong> - Correction de bugs critiques</li>
+                    <li><strong>🔄 Mises à jour optimisées</strong> - Système Sparkle amélioré</li>
+                    <li><strong>🎯 Précision IA améliorée</strong> - Réponses plus pertinentes</li>
+                </ul>
+                
+                <p>Une mise à jour recommandée pour tous les utilisateurs !</p>
+            ]]></description>
+            <pubDate>Sat, 28 Jun 2025 15:51:25 +0200</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>0.2.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+            <link>https://github.com/enzocarpentier/Optima/releases/tag/v0.2.3</link>
+            <enclosure 
+                url="https://raw.githubusercontent.com/enzocarpentier/Optima/main/Optima-0.2.3-Universal.zip"
+                length="5147964"
+                type="application/octet-stream"
+                sparkle:edSignature="nghAY1HG0+GOzlMiVQWTB4332ybe5XlCp7G+77cxdtWozsXMhLIScYQUOsvSlYqsj4w6G33YNdRMJka7veUdCQ==" />
+        </item>
+        
         <!-- Version 0.2.2 - Nouvelles fonctionnalités -->
         <item>
             <title>Version 0.2.2 - Fonctionnalités avancées</title>
